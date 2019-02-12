@@ -37,21 +37,21 @@ class Schedule {
   }
 
   /**
-   * Set the cron to work at this hour
-   * @param int $hour
+   * Set the cron to work at these hour(s)
+   * @param int|string $hour
    * @return $this
    */
-  public function hours(int $hour) {
+  public function hours($hour) {
     $this->cron->setPart(1, $hour);
     return $this;
   }
 
   /**
-   * Set the cron to work at this minutes
-   * @param int $minutes
+   * Set the cron to work at these minute(s)
+   * @param int|string $minutes
    * @return $this
    */
-  public function minutes(int $minutes) {
+  public function minutes($minutes) {
     $this->cron->setPart(0, $minutes);
     return $this;
   }
